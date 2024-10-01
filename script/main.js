@@ -26,6 +26,11 @@ const fetchData = () => {
 
 // Animation Timeline
 const animationTimeline = () => {
+  // Play music on page load
+  const music = document.getElementById("birthdayMusic");
+  music.play().catch(error => {
+    console.log("Autoplay was prevented:", error);
+  });
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
